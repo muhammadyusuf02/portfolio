@@ -1,0 +1,378 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            {% for item in about %}
+            <div class="column is-flex is-flex-wrap-wrap is-align-items-center">
+                <div>
+                    <h4>
+                        Hello,
+                    </h4>
+                    <h1 class="is-size-1">
+
+                        <strong>My name is {{item.first_name}}</strong> <br>
+                        <h4>My last_name is {{item.last_name}}</h4>
+                        <h4>my birtgday in {{item.date_birth}} december</h4>
+                        <h4>
+                            {{item.motto}}
+                        </h4>
+                    </h1>
+                </div>
+                <button class="button"
+                    style="background-color: #8643DC; border-radius:35px; width: 200px; height: 60px;">
+                    <p style="color: #fff;">Let's Talk</p>
+                </button>
+            </div>
+            <div class="column">
+                <img src="{{item.image}}" style=" width: 535px; height:622px ;" alt="">
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="column">
+            <div style="color: #8643DC;">Service</div>
+            <div>
+                <p><strong>
+                        What actually <br> i love to do
+                    </strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container">
+    <div class="columns">
+        {% for item in card %}
+        <a href="{{item.get_absolute_url}}">
+
+            <div class="column is-flex is-justify-content-space-between ">
+                <div class="is-flex is-justify-content-space-around">
+                    <div class="card " style="height: 300px; width: 350px; border-radius: 25px;">
+                        <div class="is-flex is-justify-content-center">
+                            <img src="{{item.image}}" style="width: 62px; height: 60.59px; justify-content: center;"
+                                alt="">
+                        </div>
+                        <p class="has-tetxt-centered"><strong>{{item.text}}</strong></p>
+                        <h6>
+                            {{item.title}}
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container">
+    <div class="columns">
+        <div class="column">
+            <h5 class="is-size-5" style="color: #8643DC;">Portfolio</h5>
+        </div>
+    </div>
+    <div class="columns">
+
+
+        <div class=" container column is-flex is-justify-content-space-between">
+            <h2 class="is-size-2 "><strong>All Creative <br> Projects</strong></h2>
+            <h5 class="is-size-5"><strong>Explore More <img style="height: 16.06px; width: 18px;"
+                        src="../../static/images/8.png" alt=""></strong></h5>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-flex is-justify-content-space-around">
+            {% for item in rasm %}
+            <img src="{{item.image}}" style="height: 427px; width: 540px;" alt="">
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h5 class="is-size-5" style="color: #8643DC;">Clients</h5>
+    <h2 class="is-size-2 "><strong>Big Deal <br> With</strong></h2>
+    <div class="columns is-flex is-justify-content-space-around">
+        {% for item in karta %}
+        <div class="column">
+            <div class="card is-flex is-align-items-center is-justify-content-center"
+                style="height: 170px; width:170px; border-radius: 10px;">
+                <div class="">
+                    <div>
+                        <img src="{{item.image}}" style="height: 50px; width: 50px;" alt="">
+                    </div><br>
+                    <div>
+                        <strong>{{item.title}}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container">
+    <h5 class="is-size-5" style="color: #8643DC;">Testimonials</h5>
+    <h2 class="is-size-2 "><strong>What People <br> Says</strong></h2>
+
+
+
+    <div class="columns is-centered   is-flex is-flex-wrap-wrap">
+        <div class="column is-12" style="overflow:hidden">
+            <div id="carousel-demo" class="carousel">
+                <div class="item-1 column is-12 m-1">
+                    <div class="is-flex is-flex-wrap-wrap">
+                        <div class="column item-1 is-centered has-text-centered">
+                            <img src="../../static/images/16.jpg" style="width: 100px; height: 150px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <p class="has-text-centered">
+                                Quote Testimonials demonstrate support for your product or feature from a user who has
+                                experience
+                                with
+                                it. This can be significanty more effective than traditional advertising methods as most
+                                consumers
+                                will
+                                trust.
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/20.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/17.jpg" style="width: 70px; height: 105px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/18.png" style="width: 124.95px; height: 188.16px;" alt="">
+
+                            <p class="has-text-centered">
+                            <p><strong>Michal John</strong>
+                                CEO of MZP
+                            </p>
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/19.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-3 column is-12 m-1">
+                    <div class="is-flex is-flex-wrap-wrap">
+                        <div class="column item-1 is-centered has-text-centered">
+                            <img src="../../static/images/16.jpg" style="width: 100px; height: 150px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <p class="has-text-centered">
+                                Quote Testimonials demonstrate support for your product or feature from a user who has
+                                experience
+                                with
+                                it. This can be significanty more effective than traditional advertising methods as most
+                                consumers
+                                will
+                                trust.
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/20.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/17.jpg" style="width: 70px; height: 105px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/18.png" style="width: 124.95px; height: 188.16px;" alt="">
+
+                            <p class="has-text-centered">
+                            <p><strong>Michal John</strong>
+                                CEO of MZP
+                            </p>
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/19.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-2 column is-12 m-1">
+                    <div class="is-flex is-flex-wrap-wrap">
+                        <div class="column item-1 is-centered has-text-centered">
+                            <img src="../../static/images/16.jpg" style="width: 100px; height: 150px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <img src="../../static/images/21.png" style="width: 18.5px; height: 31.63px;" alt="">
+                            <p class="has-text-centered">
+                                Quote Testimonials demonstrate support for your product or feature from a user who has
+                                experience
+                                with
+                                it. This can be significanty more effective than traditional advertising methods as most
+                                consumers
+                                will
+                                trust.
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/20.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/17.jpg" style="width: 70px; height: 105px;" alt="">
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/18.png" style="width: 124.95px; height: 188.16px;" alt="">
+
+                            <p class="has-text-centered">
+                            <p><strong>Michal John</strong>
+                                CEO of MZP
+                            </p>
+                            </p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="../../static/images/19.jpg" style="width: 105px; height: 158px;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    {% for item in picture %}
+    <div class="columns">
+
+        <div class="column">
+            <h5 class="is-size-5" style="color: #8643DC;">Blog</h5>
+            <h2 class="is-size-6 "><strong>Get News <br> Feeds</strong></h2>
+        </div>
+        <div class="column">
+            <img src="{{item.image}}" style="width:350px; height: 233px;" alt="">
+            <h5 class="is-size-5" style="color: #8643DC;">{{item.data}}</h5>
+            <h2 class="is-size-6 "><strong>{{item.title}}</strong>
+            </h2>
+        </div>
+        <div class="column">
+            <img src="../../static/images/24.jpg" style="width: 255px; height: 350px;" alt="">
+        </div>
+        <div class="column">
+            <img src="../../static/images/25.jpg" style="width: 255px; height: 350px;" alt="">
+        </div>
+
+    </div>
+    {% endfor %}
+</section>
+
+
+<section class="container">
+    <div>
+        <h5 class="is-size-5" style="color: #8643DC;">Contact Me</h5>
+    </div>
+    <div class="columns">
+        <div class="column  is-flex is-justify-content-space-between">
+            <p class="is-size-6">
+                <strong>
+                    Let me know if you want to talk <br>
+                    about a potential collaboration. <br>
+                    I'm available for freelance work. <br>
+                </strong>
+            </p>
+            <h5 class="is-size-5" style="color: #8643DC;">infoname@mail.com</h5>
+        </div>
+    </div>
+</section>
+
+
+<section class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="columns is-centered">
+            <div class="column  is-6">
+                <span>{{form.email.label}}</span>
+                {{form.email}}
+                {% if form.email.errors %}
+                <p class="has-text-danger">Emailni togri kiriting</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column  is-3">
+                <span>{{form.first_name.label}}</span>
+                {{form.first_name}}
+            </div>
+            <div class="column is-3">
+                <span>{{form.last_name.label}}</span>
+                {{form.last_name}}
+            </div>
+        </div>
+
+        <div class="columns  is-centered">
+            <div class="column  is-6">
+                <span>{{form.username.label}}</span>
+                {{form.username}}
+
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column is-3">
+                <span>{{form.password1.label}}</span>
+                {{form.password1}}
+                {% if form.password1.errors %}
+                <p class="has-text-danger">Parolni1 togri kiriting</p>
+                {% endif %}
+            </div>
+            <div class="column is-3">
+                <span>{{form.password2.label}}</span>
+                {{form.password2}}
+                {% if form.password2.errors %}
+                <p class="has-text-danger">Parolni2 togri kiriting</p>
+                {% endif %}
+            </div>
+        </div>
+        {% if form.errors %}
+        <div class="columns is-centered">
+            <div class="column is-6">
+                <h1 class="is-size-6">Ma'lumot xato...</h1>
+            </div>
+        </div>
+        {% endif %}
+    </form>
+    <div class="columns is-flex  is-justify-content-space-between">
+        <div>
+            <div class="column ">
+                <button class="button is-rounded" style="background-color: #8643DC; width: 200px; height: 60px;">Get a
+                    Quote</button>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="column">
+                <img src="../../static/images/26.png" style="height: 17.93px; width: 16.55px;" alt="">
+                <img src="../../static/images/27.png" style="height: 17.93px; width: 16.55px;" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

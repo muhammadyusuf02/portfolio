@@ -1,0 +1,30 @@
+{% extends 'portfolio/base.html' %}
+
+
+{% block content %}
+<section class="container my-6">
+    <div class="columns  is-centered">
+        <div class="column is-10">
+            <h1 class="title is-2">{{about.title}}</h1>
+            <figure class="img">
+                <img src="{{cards.image.url}}" alt="">
+            </figure>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <p class="has-text-black">{{about.description}}</p>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <i>{{about.created_at | date:"d, M Y"}}</i>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+

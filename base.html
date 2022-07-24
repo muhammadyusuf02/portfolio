@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="columns m-0 p-0  has-text-centered">
+                <div class="column ">
+                    <img src="../../static/images/1.png" style="width: 40px;  height: 40px;" alt="">
+                </div>
+
+                <div class="column">
+                    <div class="is-flex is-flex-wrap-wrap">
+                        <div class="is-size-5"> <strong>About</strong> </div>
+                        <div class="section"></div>
+                        <div>
+                            <p class="is-size-5">Service</p>
+                        </div>
+                        <div class="section"></div>
+                        <div>
+                            <p class="is-size-5">Works</p>
+                        </div>
+                        <div class="section"></div>
+                        <div>
+                            <p class="is-size-5">Blog</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <img src="../../static/images/2.png" style="width: 100px; height: 100px;" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <p><strong>Let's be Friends</strong></p>
+                    <img src="../../static/images/footer1.png" style="width: 50px; height: 50px;" alt="">
+                    <img src="../../static/images/footer2.png" style="width: 50px; height: 50px;" alt="">
+                    <img src="../../static/images/footer3.png" style="width: 50px; height: 50px;" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script defer src="../../static/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            autoplay: true,
+            infinite: true,
+        });
+    </script>
+</body>
+
+</html>
